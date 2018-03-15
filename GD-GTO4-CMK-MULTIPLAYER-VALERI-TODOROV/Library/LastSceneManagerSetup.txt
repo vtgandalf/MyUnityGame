@@ -1,0 +1,7 @@
+sceneSetups:
+- path: Assets/Multiplayer.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/GridModule/GridModule.unity
+  isLoaded: 1
+  isActive: 0
