@@ -154,12 +154,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &165129438 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114825085983557768, guid: a014a39d412e24fda98e5524af794c53,
-    type: 2}
-  m_PrefabInternal: {fileID: 905088158}
-  m_Script: {fileID: 11500000, guid: 396e6b4ec1fc04f4c8bc33cbbee0735c, type: 3}
 --- !u!224 &165129442 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224630137793974418, guid: a014a39d412e24fda98e5524af794c53,
@@ -253,6 +247,7 @@ RectTransform:
   - {fileID: 797972162}
   - {fileID: 1463383968}
   - {fileID: 165129442}
+  - {fileID: 1698279844}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -332,8 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cdd70d39ccf4cca914c6680e4adf34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prototype: {fileID: 114070610526778342, guid: b65c90cf442dd461b90ab856292cef02,
-    type: 2}
+  Prototype: {fileID: 0}
   Map: {fileID: 644827570}
   Costs: []
 --- !u!1 &512246612
@@ -1122,14 +1116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cdd70d39ccf4cca914c6680e4adf34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prototype: {fileID: 114313065718326278, guid: d3f63fa43d3974c69840ae4a563635eb,
-    type: 2}
+  Prototype: {fileID: 1708212123925352, guid: d3f63fa43d3974c69840ae4a563635eb, type: 2}
   Map: {fileID: 644827570}
   Costs:
   - Resource: {fileID: 1463383970}
     Cost: 50
-  - Resource: {fileID: 165129438}
-    Cost: 10
 --- !u!224 &1463383968 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224630137793974418, guid: a014a39d412e24fda98e5524af794c53,
@@ -1290,8 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cdd70d39ccf4cca914c6680e4adf34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prototype: {fileID: 114410652318491262, guid: 6dcc8ad2e98cd41a5a0ef54d8a530664,
-    type: 2}
+  Prototype: {fileID: 0}
   Map: {fileID: 644827570}
   Costs: []
 --- !u!1 &1518500382
@@ -1513,6 +1503,93 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650365469}
+--- !u!1 &1698279843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1698279844}
+  - component: {fileID: 1698279847}
+  - component: {fileID: 1698279846}
+  - component: {fileID: 1698279845}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1698279844
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698279843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 196463821}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -347, y: -243.5}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1698279845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698279843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a930f8cc1959d56448f8a2f5db5131a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  factory: {fileID: 1456260569}
+--- !u!114 &1698279846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698279843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.94482756, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 240
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: kek
+--- !u!222 &1698279847
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698279843}
 --- !u!1 &1935567133
 GameObject:
   m_ObjectHideFlags: 0
