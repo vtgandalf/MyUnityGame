@@ -43,7 +43,34 @@ public class Selection : MonoBehaviour
                 else
                 {
                     this.temp = cell;
-                    this.temp.transform.GetChild(0).GetComponent<Cell>().Hovered();
+
+                    if (this.selected != null)
+                    {
+                        int x = Math.Abs(cell.X - selected.transform.parent.GetComponent<Cell>().X);
+                        int y = Math.Abs(cell.Y - selected.transform.parent.GetComponent<Cell>().Y);
+                        info = x.ToString() + " " + y.ToString();
+                        if ((x * y <= 1 && (x == 1 || y == 1)) && cell.InUse == false)
+                        {
+                            this.temp.transform.GetChild(0).GetComponent<Cell>().Hovered();
+                            if (Input.GetMouseButtonDown(1) && this.selected != null)
+                            {
+                                Unit spearman = new Unit();
+                                spearman = this.selected.transform.parent.GetChild(1).GetComponent<Unit>();
+                                if (spearman != null)
+                                {
+                                    spearman.transform.SetParent(cell.transform, false);
+                                    this.selected.transform.parent.GetComponent<Cell>().InUse = false;
+                                    this.selected.GetNeutral();
+                                    this.selected = cell;
+                                    this.selected.Selected();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            this.temp.transform.GetChild(0).GetComponent<Cell>().OutOfReach();
+                        }
+                    }
                 }
             }
         }

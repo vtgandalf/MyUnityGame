@@ -15,6 +15,7 @@ public class Cell : MonoBehaviour
         //rend = this.gameObject.GetComponent<Renderer>();
         //this.material = rend.material;
         // Cell parent = this.gameObject.GetComponentInParent<Cell>();
+        InUse = false;
         def = gameObject.GetComponent<Renderer>().material.color;
     }
 
